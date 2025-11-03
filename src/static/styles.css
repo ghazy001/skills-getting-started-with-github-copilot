@@ -89,8 +89,7 @@ section h3 {
 }
 
 .activity-card .participants-list {
-  list-style: disc;
-  list-style-position: inside;
+  list-style: none; /* hide bullet points */
   margin: 0;
   padding: 0;
   max-height: 120px; /* limit height when many participants */
@@ -106,6 +105,27 @@ section h3 {
   font-size: 14px;
   color: #444;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+/* Small delete icon/button on the right of each participant */
+.activity-card .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.remove-btn:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* Subtle empty state styling */
